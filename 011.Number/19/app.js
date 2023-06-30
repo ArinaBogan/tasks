@@ -17,9 +17,9 @@ if (d > 0) {
     } else { console.log(x2, x1); }
 }
 
-if (d < 0) {
+else if (d < 0) {
     console.log('нет корней');
 }
-if (d == 0) {
+else if (d == 0) {
     console.log(-b / (2 * a));
 }
