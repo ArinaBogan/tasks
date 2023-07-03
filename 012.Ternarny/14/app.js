@@ -2,10 +2,11 @@
 // Добавить проверки для строк. Удалить лишние пробелы
 
 
-let a=prompt('введите строку');
+let a = prompt('введите строку').trim();
 
-if(isNaN){
+if (isNaN) {
+    console.log(a == 'hschool' ? true : false);
 
-} else{
+} else {
     console.log('ошибка ввода');
 }
