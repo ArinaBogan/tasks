@@ -4,6 +4,7 @@
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 
 const a = prompt();
+
 if (isNaN(a)) {
     console.log('ошибка ввода');
 } else {

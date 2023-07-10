@@ -2,3 +2,11 @@
 // противном случае false
 // мем -> true
 // тест -> false
+
+const a = prompt('введите слово').trim().toLowerCase();
+
+if (a === a.split('').reverse().join('')) {
+    console.log(true);
+} else {
+    console.log(false);
+}
