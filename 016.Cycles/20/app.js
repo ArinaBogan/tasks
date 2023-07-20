@@ -11,7 +11,6 @@ for (let i = 0; i < num.length; i++) {
         res.push(num[i]);
         continue;
     }
-    // let last_el = res[res.length - 1];
     if (num[i] % 2 !== 0 && num[i - 1] % 2 !== 0) {
         res.push(':', num[i]);
         continue;
