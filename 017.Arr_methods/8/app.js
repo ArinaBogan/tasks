@@ -9,11 +9,15 @@ for (let i = 0; i < n; i++) {
     arr.push(prompt('введите значение'));
 }
 
-let res = [];
-arr.forEach(function (el) {
-    if (!isNaN(el)) {
-        res.push(el)
-    }
-})
+// let res = [];
+// arr.forEach(function (el) {
+//     if (!isNaN(el)) {
+//         res.push(el)
+//     }
+// })
+// arr.length == res.length ? console.log(true) : console.log(false);
 
-arr.length == res.length ? console.log(true) : console.log(false);
+let res = arr.every(function (el) {
+    return !isNaN(el) ? true : false;
+})
+console.log(res);

@@ -12,9 +12,9 @@ for (let i = 0; i < n; i++) {
     }
 }
 
-// const num = arr.reduce(function (sum, el) {
+// const num = arr.reduce(function (res, el) {
 //     if (!isNaN(el)) {
-//         return sum * el;
+//         return res * el;
 //     }
 // }, 1);
 // console.log(num);

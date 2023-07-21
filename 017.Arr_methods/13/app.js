@@ -6,7 +6,6 @@
 
 const n = prompt('введите количество элементов массива');
 let arr = [];
-const str = 'javascript';
 
 for (let i = 0; i < n; i++) {
     let el = prompt('заполните массив')

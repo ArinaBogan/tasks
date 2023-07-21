@@ -4,3 +4,24 @@
 // [1, 2, 3, 4, 5, 6] -> [“нечет”, “чет”, “нечет”, “чет”, “нечет”, “чет”]
 // [1, 24, 5] -> [“нечет”, “чет”, “нечет”]
 // Использовать map
+
+const n = prompt('введите количество элементов массива');
+let arr = [];
+
+for (let i = 0; i < n; i++) {
+    let el = prompt('введите значение');
+    if (!isNaN(el)) {
+        arr.push(el);
+    }
+}
+console.log(arr);
+
+let res = arr.map(function (el) {
+    if (el % 2 === 0) {
+        return 'чет';
+    } else {
+        return 'нечет';
+    }
+})
+
+console.log(res);
