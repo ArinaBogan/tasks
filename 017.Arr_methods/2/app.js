@@ -6,11 +6,11 @@
 
 const n = 7;
 let arr = [];
-let num_1 = prompt();
-let num_2 = prompt();
+let num_1 = prompt('введите первое число');
+let num_2 = prompt('введите второе число');
 
 for (let i = 0; i < n - 2; i++) {
-    arr.push(prompt());
+    arr.push(prompt('введите элементы массива'));
 }
 
 let res = [];
