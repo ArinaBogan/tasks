@@ -5,11 +5,10 @@ const arr = [2, 30, 4, 25, 16, 10];
 const obj = {};
 
 for (let i = 0; i < arr.length; i++) {
-    arr[i] == obj[i];
-    if (obj[i] % 2 == 0) {
-        obj[i] == true;
+    if (arr[i] % 2 == 0) {
+        obj[arr[i]] = true
     } else {
-        obj[i] == false;
+        obj[arr[i]] = false;
     }
 }
 console.log(obj);
