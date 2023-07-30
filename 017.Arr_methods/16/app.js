@@ -10,3 +10,33 @@
 // 5 -> [[1, 2, 3, 4, 5], [6]]
 // 6 -> [[1, 2, 3, 4, 5, 6]]
 
+const arr = [1, 2, 3, 4, 5, 6];
+const n = prompt('введите число');
+
+if (n > arr.length || n == 0 || n == '' || isNaN(n)) {
+    console.log('введите другое значение');
+} else {
+    let result = [];
+    let item = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        item.push(arr[i]);
+
+        if (item.length == n) {
+            result.push(item);
+            item = [];
+        }
+        if (i == arr.length - 1) {
+            result.push(item);
+        }
+
+    }
+    console.log(result);
+}
+
+    //  2-й способ
+    // for (let i = 0; i < arr.length; i += n) {
+    //     result.push(arr.slice(i, i + n));
+    // }
+    // console.log(result);
+
