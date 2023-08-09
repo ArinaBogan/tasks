@@ -6,9 +6,7 @@ const arr = JSON.parse("[1, 2, 3, 4, 5, 6, 7, 8, 9]");
 
 function parsArray(arr) {
     try {
-        if (!Array.isArray(arr)) {
-            throw new Error('Не является массивом');
-        }
+        if (!Array.isArray(arr)) throw new Error('Не является массивом');
         let new_arr = arr.filter(function (el) {
             if (!isNaN(el)) return el % 3 == 0;
         });

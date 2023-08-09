@@ -12,9 +12,7 @@ const arr = JSON.parse(`[
 
 function parsArray(arr) {
     try {
-        if (!Array.isArray(arr)) {
-            throw new Error('Не является массивом');
-        }
+        if (!Array.isArray(arr)) throw new Error('Не является массивом');
         let new_arr = arr.filter(function (el) {
             return el.id % 2 == 0;
         });
