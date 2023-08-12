@@ -1,0 +1,17 @@
+// На вход подается строка в виде числа. Необходимо написать регулярное
+// выражение. Если строка состоит только из чисел, то вывести булевое true, в
+// противном случае бросить исключение и обработать
+
+const str = '123'
+
+function isValid(str) {
+    try {
+        if (!/^[0-9]+$/g.test(str))
+            throw new Error('строка должна содержать только числа')
+        return true;
+    } catch (error) {
+        return error.message;
+    }
+}
+const result=isValid(str);
+console.log(result);
