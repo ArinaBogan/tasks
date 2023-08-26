@@ -2,9 +2,9 @@
 // CamelCase (примерСтрокиВCamelCase )
 
 const btn = document.querySelector('button');
-const inp = document.querySelector('input');
 
 btn.addEventListener('click', function () {
+    const inp = document.querySelector('input');
     const result = document.querySelector('div');
 
     let str = inp.value.split(' ');
