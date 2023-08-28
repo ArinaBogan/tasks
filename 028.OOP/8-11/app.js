@@ -26,9 +26,33 @@ class Validator {
             return error.message;
         }
     }
+
+    isDate(date) {
+        try {
+            if (!/^[0-3][0-9]\.[0-1][0-9]\.[0-9]+$/gm.test(date))
+                throw new Error('дата введена некорректно');
+            return true;
+        } catch (error) {
+            return error.message;
+        }
+    }
+
+    isPhone(number) {
+        try {
+            if (/^(\+375)[0-9]{9}$/gm.test(number))
+                throw new Error('номер телефона введен неверно');
+            return true;
+        } catch (error) {
+            return error.message;
+        }
+    }
 }
 const validator = new Validator();
 const email = validator.isEmail('arina.bogan@gmail.com');
 console.log(email);
 const url = validator.isURL('https://github.com/');
 console.log(url);
+const date = validator.isDate('28.09.2002');
+console.log(date);
+const num = validator.isPhone('+3752911111111');
+console.log(num);
