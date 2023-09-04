@@ -36,11 +36,11 @@ class ServerPost {
             { "id": 4, "name": "German", "age": 18 },
             { "id": 5, "name": "Maria", "age": 27 }
         ]
-        const new_arr = arr.filter((el) => el.name !== obj.name)
-        new_arr.push({ id: 6, ...obj })
+        const new_arr = arr.filter((el) => el.id !== obj.id)
+        new_arr.unshift(obj)
         return new_arr;
     }
 }
 const serverPost = new ServerPost();
-const obj = JSON.parse();
+const obj = JSON.parse(`{"id": 1, "name": "Test", "age": 1 }`);
 console.log(serverPost.controller(obj));
