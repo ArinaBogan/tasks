@@ -15,3 +15,32 @@
 // Необходимо найти id клиента в массиве БД. Если совпадение есть, произвести
 // обновление значений для соответствующих ключей.
 // Если совпадения по id нет – ошибка. Добавить проверки 
+class ServerPost {
+    controller(obj) {
+        try {
+            const serv = this.service(obj);
+            return serv;
+        } catch (error) {
+            return error.message;
+        }
+    }
+    service(obj) {
+        const rep = this.repository(obj);
+        return rep;
+    }
+    repository(obj) {
+        const arr = [
+            { "id": 1, "name": "Yesenia", "age": 22 },
+            { "id": 2, "name": "Hanna", "age": 22 },
+            { "id": 3, "name": "Stanislau", "age": 25 },
+            { "id": 4, "name": "German", "age": 18 },
+            { "id": 5, "name": "Maria", "age": 27 }
+        ]
+        const new_arr = arr.filter((el) => el.name !== obj.name)
+        new_arr.push({ id: 6, ...obj })
+        return new_arr;
+    }
+}
+const serverPost = new ServerPost();
+const obj = JSON.parse();
+console.log(serverPost.controller(obj));
