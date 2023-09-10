@@ -17,6 +17,5 @@ const result = doCount(obj);
 console.log(result);
 
 
-const value = Object.values(obj);
-console.log(value);
-console.log(value.length);
+// const value = Object.values(obj);
+// console.log(value.length);

@@ -15,7 +15,7 @@ btn.addEventListener('click', function () {
     const div = document.querySelector('div');
     try {
         isValid(inp.value);
-        div.innerHTML = inp.value;
+        div.innerHTML = inp.value * 2;
         inp.value = '';
     } catch (error) {
         alert(error.message);
