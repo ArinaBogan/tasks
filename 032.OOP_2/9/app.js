@@ -5,17 +5,12 @@
 const div = document.querySelector('div');
 const arr = [];
 
-function doArray(n) {
-    for (let i = 0; i < n; i++) {
-        arr.push(Math.round(Math.random() * 100))
-    }
-    div.innerHTML = arr;
+for (let i = 0; i < 15; i++) {
+    arr.push(Math.round(Math.random() * 100))
 }
-const res = doArray(15);
+div.innerHTML = arr;
 
-function deleteElement(res) {
-    div.addEventListener('click', function (target) {
-        event.target.remove();
-    })
-}
-const result = deleteElement(res);
+div.addEventListener("click", function (event) {
+    let value = event.target;
+    div.remove(value);
+});
