@@ -17,6 +17,7 @@ btn.addEventListener('click', function () {
         isValid(inp.value);
         arr.push(inp.value);
         div.innerHTML = arr;
+        div.style = 'color:black'
         inp.value = '';
     } catch (error) {
         div.innerHTML = error.message;
