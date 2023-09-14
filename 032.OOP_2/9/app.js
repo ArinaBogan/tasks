@@ -3,14 +3,16 @@
 // клик происходит, то удалить данное значение из массива в div
 
 const div = document.querySelector('div');
-const arr = [];
+const result = document.querySelector('.result');
 
 for (let i = 0; i < 15; i++) {
-    arr.push(Math.round(Math.random() * 100))
+    let num = (Math.round(Math.random() * 100));
+
+    let li = document.createElement('li');
+    div.appendChild(li);
+    li.innerHTML = num;
 }
-div.innerHTML = arr;
 
 div.addEventListener("click", function (event) {
-    let value = event.target;
-    div.remove(value);
+    div.removeChild(event.target)
 });
