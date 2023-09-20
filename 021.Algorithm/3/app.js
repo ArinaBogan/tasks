@@ -19,7 +19,7 @@ function doSum(arr) {
     return arr[0] + doSum(arr.slice(1));
 }
 
-const valid=isValid(arr); //[2,3,6]
+const valid=isValid(arr);
 const result = doSum(valid);
 
 console.log(result);
