@@ -7,11 +7,7 @@ const arr = [1, 2, 3, 4, -5, -6, 7, 8];
 
 function doCheck(a) {
     let res = a.every(function (el) {
-        if (!isNaN(el)) {
-            return true;
-        } else {
-            return false;
-        }
+        return !isNaN(el) ? true : false;
     })
     return res;
 }
@@ -28,13 +24,4 @@ function findMax(a) {
 }
 const result = findMax(arr);
 
-if (check == true) {
-    console.log(result);
-} else {
-    console.log(check);
-}
-
-
-
-
-
+console.log(check == true ? result : check);
