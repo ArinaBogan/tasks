@@ -2,10 +2,15 @@
 // проверку на ввод текстовых значений
 // hSСhOol -> #hschool
 
-const a = 'hSСhOol'.toLowerCase();
-
-if (isNaN(a)) {
-    console.log('#' + a);
-} else {
-    console.log('ошибка ввода');
+function addHashtag(str) {
+    try {
+        if (isNaN(str)) {
+            console.log('#' + str);
+        } else {
+            throw new Error('введите слово');
+        }
+    } catch (error) {
+        console.log(error.message);
+    }
 }
+addHashtag('hSСhOol'.toLowerCase());
