@@ -9,11 +9,8 @@ const arr = [];
 for (let i = 0; i < n; i++) {
     arr.push(prompt('введите значение массива'));
 }
-
 function doNewArray(a) {
-    let res = a.filter(function (el) {
-        return el > num ? true : false;
-    })
+    let res = a.filter(el => el > num ? true : false);
     return res;
 }
 const result = doNewArray(arr);
