@@ -6,8 +6,5 @@
 
 let a = prompt('введите фамилию и имя').split(' ');
 
-if (a[0][0] === a[0][0].toUpperCase() && a[1][0] === a[1][0].toUpperCase()) {
-    console.log(true);
-} else {
-    console.log(false);
-}
+console.log(a[0][0] === a[0][0].toUpperCase() && a[1][0] === a[1][0].toUpperCase())?
+true:false;
