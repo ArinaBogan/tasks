@@ -8,7 +8,7 @@ class HTML{
         const btn=document.querySelector('button');
         btn.addEventListener('click',()=>{
             btn.textContent=+btn.textContent+1;
-        })
+        });
     }
 }
 const html=new HTML();

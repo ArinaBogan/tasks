@@ -8,15 +8,14 @@
 class HTML {
     bindOption() {
         const btn = document.querySelector('button');
-
+        
         btn.addEventListener('click', () => {
             const inp = document.querySelector('input');
+            const div = document.querySelector('div');
             try {
                 if (!inp.value) throw new Error('пустой ввод');
-                const div = document.querySelector('div');
                 div.innerHTML = inp.value;
                 inp.value = '';
-
             } catch (error) {
                 inp.style = 'border:1px solid red';
                 alert(error.message);
@@ -25,4 +24,4 @@ class HTML {
     }
 }
 const html = new HTML();
-(html.bindOption());
+html.bindOption();
