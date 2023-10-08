@@ -12,15 +12,13 @@ class HTML {
         const btn1 = document.querySelector('.btn1');
         btn1.addEventListener('click', () => {
             this.div.textContent = +this.div.textContent + 1;
-
-        })
+        });
     }
     bindOptionMinus() {
         const btn2 = document.querySelector('.btn2');
         btn2.addEventListener('click', () => {
             this.div.textContent = +this.div.textContent - 1;
-
-        })
+        });
     }
 }
 const html=new HTML();

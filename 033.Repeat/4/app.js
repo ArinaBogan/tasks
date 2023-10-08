@@ -26,13 +26,11 @@ class ServerPost {
         } catch (error) {
             return error.message;
         }
-    }
-
+    };
     service(obj) {
         const rep = this.repository(obj);
         return rep;
-    }
-
+    };
     repository(obj) {
         const arr = [
             { "id": 1, "email": "yesenia@mail.ru", "pwd": "pwdffff" },
@@ -40,17 +38,16 @@ class ServerPost {
             { "id": 3, "email": "stanislau@mail.ru", "pwd": "pwdtest" },
             { "id": 4, "email": "german@mail.ru", "pwd": "pwdqqq" },
             { "id": 5, "email": "maria@mail.ru", "pwd": "pwdfcel" }
-        ]
-
+        ];
         const new_arr = arr.filter((el) => el.email == obj.email)
         if (!new_arr.length) {
             arr.push(obj)
         } else {
-            throw new Error('данный элемент уже существует')
+            throw new Error('данный элемент уже существует');
         }
         return arr;
-    }
-}
+    };
+};
 const serverPost = new ServerPost();
 const obj = { 'id': 6, "email": "test", "pwd": 1 };
 const result = serverPost.controller(obj);
