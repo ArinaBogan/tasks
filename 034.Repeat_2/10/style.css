@@ -5,14 +5,41 @@
 }
 
 body {
+    width: 1200px;
     background-color: #343434;
+}
+
+.wrapper {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.artist,
+.nameOfSong {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: white;
+}
+
+.songCover {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 .player {
     display: flex;
     justify-content: space-between;
     width: 150px;
-    margin: 20% auto;
+    margin: auto;
+    align-items: center;
 }
 
 .back {
