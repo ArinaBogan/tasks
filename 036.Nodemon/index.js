@@ -4,8 +4,7 @@
 // 4. На сервере есть файл сервисов. В нем глобально хранится массив. Прописать
 // логику так, чтобы при get запросе отправлялся ответ клиенту с массивом внутри
 // тела
-// 5. На сервере есть файл сервисов. В нем глобально хранится массив объектов.
-// Прописать логику так, чтобы при get запросе отправлялся ответ клиенту с
+// 5. Прописать логику так, чтобы при get запросе отправлялся ответ клиенту с
 // массивом внутри тела и статус ответа
 // 6. Добавить 1 обработчик маршрута: get с url “/:id”. На сервере есть файл сервисов. В
 // нем глобально хранится массив объектов. Прописать логику так, чтобы при get
@@ -22,7 +21,8 @@ const express = require('express');
 const { getAllData,
     getDataById,
     createData,
-    updateData } = require('./service');
+    updateData,
+    deleteData } = require('./service');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 app.get('/:id', (req, res) => {
     const { id } = req.params;
     const newArr = getDataById(id);
-    res.send(newArr)
+    res.send(newArr);
 })
 
 app.post('/', (req, res) => {
@@ -55,7 +55,12 @@ app.delete('/:id', (req, res) => {
     const { id } = req.params;
     const data = deleteData(id);
     res.send(data);
-})
+});
+app.delete('/:id', (req, res) => {
+    const { id } = req.params;
+    const data = deleteData(id);
+    res.send(data)
+});
 
 app.listen(3000, () => {
     console.log('server is running');

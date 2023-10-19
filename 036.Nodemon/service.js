@@ -8,7 +8,7 @@ const arr = [
 
 function getAllData() {
     return arr
-}
+};
 
 function getDataById(id) {
     const newArr = arr.filter((el) => el.id == id);
@@ -36,9 +36,10 @@ function updateData(id, name, age) {
     return filter
 };
 
-function deleteData(){
-    
-}
+function deleteData() {
+    const new_arr = arr.filter((el) => el.id != id)
+    return new_arr;
+};
 
-module.exports = { getAllData, getDataById, createData, updateData };
+module.exports = { getAllData, getDataById, createData, updateData, deleteData };
 
