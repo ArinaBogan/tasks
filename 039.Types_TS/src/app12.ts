@@ -2,11 +2,14 @@
 // позициях (индексах) массива.
 
 const arr12: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let sum12: number = 0;
+let newArr12: number[] = [];
 
-for (let i: number = 0; i = arr12.length; i++) {
-    if (i % 2 != 0) {
-        sum12 += arr12[i];
+for (let i: number = 0; i <arr12.length; i++) {
+    if (i % 2 !== 0) {
+        newArr12.push(arr12[i])
     }
 }
-console.log(sum12);
+const res12: number = newArr12.reduce((sum: number, el: number) => {
+    return sum + el
+}, 0)
+console.log(res12);
