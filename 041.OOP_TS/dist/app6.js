@@ -27,7 +27,6 @@
 // console.log(calculator.substract());
 // console.log(calculator.multiply());
 // console.log(calculator.divide());
-
 //2
 class Calculator {
     a;
