@@ -15,11 +15,3 @@ const res13 = arr13.map((el) => {
     }
 });
 console.log(res13);
-// const resultArray13: string[] = arrayNums13.map((el: number) => {
-//     if (+el % 2 === 0) {
-//         return `${el} чет`;
-//     } else {
-//         return `${el} нечет`;
-//     }
-// });
-// console.log(resultArray13);
