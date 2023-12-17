@@ -6,13 +6,9 @@
 class Shape {
 }
 class Rectangle extends Shape {
-    wigth;
-    height;
     calculateArea(height, wigth) {
-        return this.height * this.wigth;
+        return height * wigth;
     }
 }
 const rectangle = new Rectangle();
-rectangle.wigth = 10;
-rectangle.height = 2;
-console.log(rectangle.calculateArea);
+console.log(rectangle.calculateArea(10, 2));
