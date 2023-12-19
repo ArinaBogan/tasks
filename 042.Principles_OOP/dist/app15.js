@@ -2,14 +2,6 @@
 // свойства name, age и color. Реализуйте методы getName, getAge и getColor,
 // которые будут возвращать соответствующие свойства. Создайте несколько
 // объектов класса Cat и выведите их данные.
-// interface iCat1 {
-//     name: string;
-//     age: number;
-//     color: string;
-//     getName(): string;
-//     getAge(): number;
-//     getColor(): string;
-// }
 class Cat1 {
     name = 'Tom';
     age = 2;
