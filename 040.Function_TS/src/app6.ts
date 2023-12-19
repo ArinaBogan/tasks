@@ -1,14 +1,14 @@
 // У вас есть массив объектов вида приведенного в приложении. Необходимо
-// вывести все товары, количество которых больше 10
+// вывести средний прайс среди всех продуктов
 
-interface iArr1 {
+interface iArr6 {
     id: number,
     title: string,
     count: number,
     price: number
 }
 
-const arr1: iArr1[] = [
+const arr6: iArr6[] = [
     { id: 1, title: 'Часы', count: 10, price: 500 },
     { id: 2, title: 'Смартфон', count: 33, price: 1500 },
     { id: 3, title: 'Моноблок', count: 6, price: 2200 },
@@ -16,8 +16,10 @@ const arr1: iArr1[] = [
     { id: 5, title: 'Планшет', count: 22, price: 2100 },
 ]
 
-function name1(arr1: iArr1[]): iArr1[] {
-    return arr1.filter((el: iArr1) => el.count > 10)
+function averagePrice(arr6: iArr6[]): number {
+    const sum: number = arr6.reduce((sum: number, el: iArr6) => {
+        return sum += el.price;
+    }, 0)
+    return sum / arr6.length;
 }
-
-console.log(name1(arr1));
+console.log(averagePrice(arr6));
