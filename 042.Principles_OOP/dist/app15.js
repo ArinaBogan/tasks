@@ -10,21 +10,21 @@
 //     getAge(): number;
 //     getColor(): string;
 // }
-// class Cat1 implements iCat1 {
-//     name: string = 'Tom';
-//     private age: number = 2;
-//     private color: string = 'white';
-//     getName(): string {
-//         return this.name;
-//     }
-//     getAge(): number {
-//         return this.age;
-//     }
-//     getColor(): string {
-//         return this.color;
-//     }
-// }
-// const cat1 = new Cat1();
-// console.log(cat1.getAge());
-// console.log(cat1.getColor());
-// console.log(cat1.getName());
+class Cat1 {
+    name = 'Tom';
+    age = 2;
+    color = 'white';
+    getName() {
+        return this.name;
+    }
+    getAge() {
+        return this.age;
+    }
+    getColor() {
+        return this.color;
+    }
+}
+const cat1 = new Cat1();
+console.log(cat1.getAge());
+console.log(cat1.getColor());
+console.log(cat1.getName());
