@@ -1,6 +1,9 @@
 // У вас есть массив строковых значений почт. Необходимо вывести значения
 // массива без дубликатов. Добавить проверки на тип данных, почту
-const arr8 = [];
+const arr8 = ['test1.gmail.com',
+    'test2.@gmail.com',
+    'test3.@gmail.com',
+    'test4.@gmail.com'];
 function isValid(arr8) {
     if (!Array.isArray(arr8))
         throw new Error('enter array');
