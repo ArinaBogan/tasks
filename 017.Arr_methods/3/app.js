@@ -6,23 +6,17 @@
 
 const n = prompt('введите количество элементов массива');
 let arr = [];
+let new_arr = [];
 
 for (let i = 0; i < n; i++) {
     arr.push(prompt());
 }
 console.log(arr);
-let new_arr = []
 
-for (let i = 0; i < n; i++) {
-    if (!isNaN(arr[i])) {
-        if (!new_arr.includes(arr[i])) {
-            new_arr.push(arr[i])
-        }
+for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(arr[i]) && !new_arr.includes(arr[i])) {
+        new_arr.push(arr[i])
     }
 }
 
-if (new_arr.length == 0) {
-    console.log('массив пуст');
-} else {
-    console.log(new_arr);
-}
+console.log(new_arr.length == 0 ? 'массив пуст' : new_arr);

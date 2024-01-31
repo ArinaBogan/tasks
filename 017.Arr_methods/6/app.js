@@ -10,11 +10,11 @@ for (let i = 0; i < n; i++) {
 }
 console.log(arr);
 
-let result = arr.some(function (el) {
-    if (el == Number(el)) {
-        return true;
+let res = arr.some((el) => {
+    if (!isNaN(el)) {
+        return true
     } else {
-        return false;
+        return false
     }
 })
-console.log(result);
+console.log(res);

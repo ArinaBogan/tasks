@@ -12,7 +12,7 @@ let arr = [];
 // console.log(arr);
 
 let i = 0;
-while (i <= Infinity) {
+while (i <Infinity) {
     arr.push(prompt("ввод"));
     if (arr.length == 5) {
         break;

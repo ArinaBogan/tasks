@@ -10,19 +10,14 @@ let num_1 = prompt('введите первое число');
 let num_2 = prompt('введите второе число');
 
 for (let i = 0; i < n - 2; i++) {
-    arr.push(prompt('введите элементы массива'));
+    arr.push(prompt('введите элементы'));
 }
 
 let res = [];
-arr.forEach(function (el) {
+arr.forEach((el) => {
     if (!isNaN(el) && el !== num_1 && el !== num_2) {
         res.push(el);
     }
 })
 
-if (res.length == 0) {
-    console.log('массив пуст');
-} else {
-    console.log(res);
-}
-
+console.log(res.length == 0 ? 'массив пуст' : res);

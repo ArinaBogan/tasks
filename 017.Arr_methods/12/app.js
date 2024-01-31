@@ -13,7 +13,7 @@ for (let i = 0; i < n; i++) {
         arr.push(el);
     }
 }
-let result = arr.filter(function (el) {
+let result = arr.filter((el) => {
     return el[0] == 'a' || el[0] == 'h' ? true : false
 })
 console.log(result);

@@ -16,12 +16,11 @@ for (let i = 0; i < n; i++) {
 }
 console.log(arr);
 
-let res = arr.map(function (el) {
+let res = arr.map((el)=> {
     if (el % 2 === 0) {
         return 'чет';
     } else {
         return 'нечет';
     }
 })
-
 console.log(res);

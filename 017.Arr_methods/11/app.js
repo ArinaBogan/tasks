@@ -12,12 +12,10 @@ for (let i = 0; i < n; i++) {
     }
 }
 
-// const num = arr.reduce(function (res, el) {
-//     if (!isNaN(el)) {
-//         return res * el;
-//     }
-// }, 1);
-// console.log(num);
+const num = arr.reduce((res, el) => {
+    return res * el;
+}, 1);
+console.log(num);
 
 let res = 1;
 arr.forEach(function (el) {

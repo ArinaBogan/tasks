@@ -6,7 +6,7 @@ const n = prompt('введите количество элементов мас�
 let arr = [];
 
 for (let i = 0; i < n; i++) {
-    let element = (prompt('введите эелемент'));
+    let element = (prompt('введите элемент'));
     if (!isNaN(element)) {
         arr.push(element)
     }
@@ -18,7 +18,7 @@ for (let i = 0; i < n; i++) {
 // })
 // console.log(res);
 
-let res = arr.reduce(function (sum, element) {
+let res = arr.reduce((sum, element) => {
     return sum + +element;
 }, 0)
 console.log(res);

@@ -10,14 +10,14 @@ for (let i = 0; i < n; i++) {
 }
 
 // let res = [];
-// arr.forEach(function (el) {
+// arr.forEach((el)=> {
 //     if (!isNaN(el)) {
 //         res.push(el)
 //     }
 // })
 // arr.length == res.length ? console.log(true) : console.log(false);
 
-let res = arr.every(function (el) {
+let res = arr.every((el) => {
     return !isNaN(el) ? true : false;
 })
 console.log(res);

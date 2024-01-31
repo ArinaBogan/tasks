@@ -8,17 +8,11 @@ let arr = [];
 for (let i = 0; i < n; i++) {
     arr.push(prompt());
 }
-
-const new_arr = arr.filter(function (el) {
-    if (el == Number(el)) {
+const new_arr = arr.filter((el) => {
+    if (!isNaN(el)) {
         return true
     } else {
         return false
     }
 })
-
-if (new_arr.length === 0) {
-    console.log('массив пуст');
-} else {
-    console.log(new_arr);
-}
+console.log(new_arr.length === 0 ? 'массив пуст' : new_arr);
